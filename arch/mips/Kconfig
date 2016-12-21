@@ -113,6 +113,12 @@ config TARGET_XILFPGA
 	help
 	  This supports IMGTEC MIPSfpga platform
 
+config TARGET_NEPTUNUS
+	bool "Support Neptunus"
+	select SUPPORTS_LITTLE_ENDIAN
+	select SUPPORTS_CPU_MIPS32_R1
+	select SUPPORTS_CPU_MIPS32_R2
+
 endchoice
 
 source "board/dbau1x00/Kconfig"
@@ -120,6 +126,7 @@ source "board/imgtec/boston/Kconfig"
 source "board/imgtec/malta/Kconfig"
 source "board/imgtec/xilfpga/Kconfig"
 source "board/micronas/vct/Kconfig"
+source "board/neptunus/neptunus/Kconfig"
 source "board/pb1x00/Kconfig"
 source "board/qemu-mips/Kconfig"
 source "arch/mips/mach-ath79/Kconfig"

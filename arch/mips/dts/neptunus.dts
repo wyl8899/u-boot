@@ -1,0 +1,17 @@
+/dts-v1/;
+
+/ {
+	#address-cells = <1>;
+	#size-cells = <1>;
+	compatible = "neptunus,neptunus";
+
+	chosen {
+		stdout-path = &uart0;
+	};
+
+	uart0: serial@0 {
+		compatible = "neptunus,serial";
+
+		reg = <0xbfd003f8 0x8>;
+	};
+};

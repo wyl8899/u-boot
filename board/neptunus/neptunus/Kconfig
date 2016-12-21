@@ -1,0 +1,15 @@
+if TARGET_NEPTUNUS
+
+config SYS_BOARD
+	default "neptunus"
+
+config SYS_VENDOR
+	default "neptunus"
+
+config SYS_CONFIG_NAME
+	default "neptunus"
+
+config SYS_TEXT_BASE
+	default 0xbe000000
+
+endif

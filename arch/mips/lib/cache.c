@@ -89,6 +89,9 @@ static inline unsigned long scache_line_size(void)
 }
 
 #define cache_loop(start, end, lsize, ops...) do {			\
+        if (!lsize) {                                                   \
+            break;                                                      \
+        }                                                               \
 	const void *addr = (const void *)(start & ~(lsize - 1));	\
 	const void *aend = (const void *)((end - 1) & ~(lsize - 1));	\
 	const unsigned int cache_ops[] = { ops };			\

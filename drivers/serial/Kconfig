@@ -413,4 +413,7 @@ config PXA_SERIAL
 	  If you have a machine based on a Marvell XScale PXA2xx CPU you
 	  can enable its onboard serial ports by enabling this option.
 
+config NEPTUNUS_SERIAL
+	bool "Neptunus serial port support"
+
 endmenu

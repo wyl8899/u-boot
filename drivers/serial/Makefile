@@ -50,3 +50,5 @@ obj-$(CONFIG_MVEBU_A3700_UART) += serial_mvebu_a3700.o
 ifndef CONFIG_SPL_BUILD
 obj-$(CONFIG_USB_TTY) += usbtty.o
 endif
+
+obj-$(CONFIG_NEPTUNUS_SERIAL) += neptunus.o
