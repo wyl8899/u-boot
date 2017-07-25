@@ -557,6 +557,10 @@ static void dm9000_get_enetaddr(struct eth_device *dev)
 	int i;
 	for (i = 0; i < 3; i++)
 		dm9000_read_srom_word(i, dev->enetaddr + (2 * i));
+#else
+	// Randomly generated MAC address
+	// We need a fixed one to get router happy
+	memcpy(dev->enetaddr, "\xd6\x77\x14\xde\x18\xc1", 6);
 #endif
 }
 
